@@ -194,7 +194,7 @@ class _Core:
             insert_data.append(item)
         
         with Session(self.engine) as session:
-            for data in tqdm(insert_data, desc="Intert into evaluation table"):
+            for data in tqdm(insert_data, desc="Insert into evaluation table"):
                 table_item = self.models_dict[table_name](
                     **data
                 )
